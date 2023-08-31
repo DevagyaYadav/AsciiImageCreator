@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#232221"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/welcome_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginBottom="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:text="Photo Editor"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+        <Button
+            android:id="@+id/selectImagebutton"
+            android:layout_marginBottom="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="select image" />
+        <Button
+            android:id="@+id/takeImagebutton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="take photo" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/editScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#151515"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/saveImage"
+                android:layout_height="match_parent"
+                android:text="Save Image"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginEnd="4dp"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:id="@+id/back"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="Go Back"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Select Density for Ascii Image"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/nothing2"
+                android:backgroundTint="@color/orange"
+                android:text="Low"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_marginRight="2dp"
+
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/smallTextImage"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/orange"
+                android:text="High"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/greyScale"
+                        android:layout_width="80dp"
+                        android:layout_height="0dp"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:drawableTop="@drawable/greyscle"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                         />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="GREY SCALE"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:id="@+id/blurImage"
+                        android:layout_width="80dp"
+                        android:drawableTop="@drawable/klsdfhsd"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:layout_marginHorizontal="2dp"
+                        android:backgroundTint="@color/black"
+                        android:text="BLUR"
+                        android:layout_marginBottom="1dp"
+                        style="?android:attr/buttonBarButtonStyle" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="BLUR"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="80dp"
+                        android:id="@+id/negative"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:drawableTop="@drawable/dssdss"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:backgroundTint="@color/black"
+                        style="?android:attr/buttonBarButtonStyle" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="NEGATIVE"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="80dp"
+                        android:id="@+id/nothing"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:drawableTop="@drawable/sdfsfsfs"
+                        android:backgroundTint="@color/black"
+                        android:text="GREY SCALE"
+                        style="?android:attr/buttonBarButtonStyle" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="COMPRESS"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="80dp"
+                        android:id="@+id/Extra"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:drawableTop="@drawable/mother"
+                        android:backgroundTint="@color/black"
+                        android:text="GREY SCALE"
+                        style="?android:attr/buttonBarButtonStyle" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="GREY SCALE"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="80dp"
+                        android:id="@+id/nothing3"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:backgroundTint="@color/black"
+                        android:text="SHARP"
+                        style="?android:attr/buttonBarButtonStyle" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="SHARPEN"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <Button
+                        android:layout_width="80dp"
+                        android:id="@+id/nothing4"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:backgroundTint="@color/black"
+                        android:text="ASCII"
+                        style="?android:attr/buttonBarButtonStyle" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:text="GREY SCALE"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
